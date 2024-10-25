@@ -26,7 +26,7 @@ def on_extract():
     loading_label = tk.Label(root, text="処理中...しばらくお待ちください", font=("Helvetica", 20), bg="#ccffcc", fg="blue")
     loading_label.pack(pady=20)
     root.update()
-    response = gpt4o_mini_response(user_input)
+    response = gpt4o_mini_response(user_input=user_input)
     loading_label.destroy()
     root.withdraw()  # 入力画面を消す
     display_output(response)
